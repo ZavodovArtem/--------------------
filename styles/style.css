@@ -22,12 +22,16 @@ body {
 .container {
     width: 1024px;
     margin: auto;
+    /* margin: 0; */
+    padding: 0;
 }
 
 .banner__border--line {
     border-bottom: 2px solid var(--color-orange);
 }
-
+.banner__border--line-section {
+    border-bottom: 2px solid var(--color-orange);
+}
 /* -------------header---------------- */
 
 .header__comp {
@@ -138,6 +142,185 @@ body {
     display: none;
 }
 
+/* -----------------------------------------------------Меню (табы)------------------------------------------------------------- */
+
+.menu__name--p {                                                /*заголовок меню*/
+    border: none;
+    border-bottom: 2px solid var(--color-orange);
+    width: 100px;
+    font-family: var(--font-basic);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    margin-left: 36px;
+}
+.menu__name {
+    margin-bottom: 30px;
+}
+.menu__content {
+    width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+
+
+.menu__product {
+    width: 300px;
+}
+.menu__product--img {
+    width: 300px;
+}
+.menu__product-name {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.menu__product--text {
+    font-family: var(--font-basic);
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 44px;
+    color: var(--txt-color-pink);
+}
+.menu__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__description-left {
+    /* width: 160px; */
+    width: 100px;
+}
+.menu__description-left--components {
+    font-family: var(--font-basic);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--txt-color-pink);
+}
+.menu__description-right {
+    /* width: 95px; */
+    width: 100px;
+}
+.menu__description-right--pay {
+    font-family: var(--font-basic);
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 32px; */
+    font-size: 20px;
+    line-height: 44px;
+    color: var(--txt-color-pink);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------Стиль для кнопок (табы)--------------------------------------------------------------- */
+.tabs {
+    /* justify-content: center; */
+ }
+ 
+ /* Стили для списка вкладок */
+ .tab-header {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+ }
+ 
+ /* Стили для вкладки */
+ .tab-header__item {
+    /* padding: 10px 20px; */
+    /* margin-right: 5px; */
+    cursor: pointer;
+    /* border: 1px solid var(--color-orange); */
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .tab-header__item--font {
+    font-family: var(--font-basic);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--txt-color-pink);
+ }
+ 
+ /* Стили для активной вкладки */
+ .tab-header__item.active {
+    color: var(--txt-color-pink);
+    border-bottom: none;
+    position: relative;
+    border: 2px solid var(--color-orange);
+    border-radius: 6px;
+ }
+ 
+ /* Стиль для списка контейнеров с содержимым вкладок */
+ .tab-content {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    list-style: none;
+    margin: 0;
+ }
+ 
+ /* Стили для контейнера с содержимым вкладки. По умолчанию скрыт. */
+ .tab-content__item {
+    display: none;
+    /* padding: 20px;
+    margin-top: -1px; */
+    margin: 0;
+ }
+ 
+ /* Стили для активного контейнера вкладки */
+ .tab-content__item.active {
+    display: block;
+ }
+/* ------------------------------------------конец табов------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
 /* @maedia (max-width: 1024px) {
     .container {
         width: 1024px;
@@ -147,14 +330,17 @@ body {
         display: none;
     }
 } */
-
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* -----------------------------------------------------------------------адаптив для планшетов 768px tablet------------------------------------------- */
 @media (max-width: 768px){
-    
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------     */
     /* ---------------------------------------------------------------------------header media tablet------------------------------------ */
     .container {
         width: 768px;
         margin: auto;
+        /* margin: 0; */
+        padding: 0;
+        
     }
     
     .header__list--point a {
@@ -194,12 +380,45 @@ body {
     .banner__phone {
         display: none;
     }
+    .menu__name--p {                                                /*заголовок меню*/
+        border: none;
+        border-bottom: 2px solid var(--color-orange);
+        width: 80px;
+        font-family: var(--font-basic);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 33px;
+        text-align: center;
+        margin-left: 36px;
+    }
+    .menu__name {
+        margin-bottom: 30px;
+    }
+
+    .menu__content {
+        width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        margin-bottom: 50px;
+    }
+    .tab-header__item--font {
+        font-size: 18px;
+     }
+    .tab-header__item {
+        width: 100px;
+        height: 40px;
+     }
 }
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------адаптив для телефонов 480px phone----------------------------------------------------------- */
 @media (max-width: 480px) {
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
     .container {
-        width: 480px;
+        max-width: 480px;
         margin: auto;
+        padding: 0;
     }
     /* --------------------------------header media phone--------------------------------------------------------------------- */
     .header__comp {
@@ -253,6 +472,7 @@ body {
         display: block;
         display: flex;
         justify-content: center;
+        /* border-bottom: 2px solid var(--color-orange); */
     }
     .banner__phone-content {
         position: absolute;
@@ -290,5 +510,47 @@ body {
     .banner__eat-phone {
         position: relative;
         left: 200px;
+    }
+
+    .menu__name--p {                                                /*заголовок меню*/
+        border: none;
+        border-bottom: 2px solid var(--color-orange);
+        width: 70px;
+        font-family: var(--font-basic);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 33px;
+        text-align: center;
+        /* margin-left: 36px; */
+        margin-left: 0px;
+    }
+    .menu__name {
+        margin-bottom: 30px;
+    }
+
+    .menu__content {
+        width: 360px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        margin-bottom: 50px;
+        margin: auto;
+        justify-content: center;
+    }
+    .tab-header__item--font {
+        font-size: 14px;
+    }
+    .tab-header__item {
+        width: 90px;
+        height: 30px;
+    }
+    .tab-content {
+        margin: auto;
+        
+    }
+    .tab-content__item {
+        margin: auto;
+        
     }
 }
